@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-petroleum: #0F384A;
+  --color-petroleum-dark: #0A2834;
+  --color-petroleum-light: #164E66;
+  --color-petroleum-muted: #1F4C60;
+  
+  --color-cream: #FAF7F2;
+  --color-cream-surface: #F5EFEB;
+  --color-cream-card: #FFFFFF;
+  --color-cream-accent: #EDE1C9;
+  --color-cream-border: #E8DFD3;
+  --color-cream-dark: #DECDB3;
+
+  --color-champagne: #D4B48B;
+  --color-champagne-light: #F4EADA;
+  --color-champagne-dark: #B99364;
+
+  --color-davia-black: #111618;
+  --color-davia-gray-muted: #6C7A82;
+  --color-davia-gray-light: #F0EDE6;
+
+  --font-serif: var(--font-serif), serif;
+  --font-sans: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Custom Utilities for E-commerce */
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Base resets & focus outlines */
+:focus-visible {
+  outline: 2px solid #0F384A;
+  outline-offset: 2px;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle image transitions */
+img {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
